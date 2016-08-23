@@ -1,9 +1,11 @@
-﻿//		
-// This file has been generated automatically by MonoDevelop to store outlets and		
-// actions made in the Xcode designer. If it is removed, they will be lost.		
-// Manual changes to this file may not be handled correctly.		
-//		
+// WARNING
+//
+// This file has been generated automatically by Xamarin Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
+//
 using Foundation;
+using System.CodeDom.Compiler;
 
 namespace Liddle.iOS
 {
@@ -11,10 +13,18 @@ namespace Liddle.iOS
 	partial class ViewController
 	{
 		[Outlet]
-		UIKit.UIButton Button { get; set; }
+		UIKit.UIButton btnConfirm { get; set; }
 
+		[Outlet]
+		UIKit.UIButton Button { get; set; }
+		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnConfirm != null) {
+				btnConfirm.Dispose ();
+				btnConfirm = null;
+			}
+
 			if (Button != null) {
 				Button.Dispose ();
 				Button = null;
