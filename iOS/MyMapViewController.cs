@@ -6,6 +6,8 @@ namespace Liddle.iOS
 {
 	public partial class MyMapViewController : UIViewController
 	{
+		public string TitleString { get; set; }
+
 		public MyMapViewController (IntPtr handle) : base (handle){
 		}
 
@@ -13,7 +15,7 @@ namespace Liddle.iOS
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
-			Title = "Map";
+			Title = TitleString;
 		}
 
 		public override void DidReceiveMemoryWarning ()

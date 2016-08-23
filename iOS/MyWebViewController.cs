@@ -1,6 +1,7 @@
 ﻿using System;
 
 using UIKit;
+using Foundation;
 
 namespace Liddle.iOS
 {
@@ -15,6 +16,11 @@ namespace Liddle.iOS
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			Title = "Web";
+
+			btnGo.TouchUpInside += (sender, e) => { 
+			
+				myWebView.LoadRequest (new NSUrlRequest (new NSUrl (@"https://www.google.com")));
+			};
 		}
 
 		public override void DidReceiveMemoryWarning ()

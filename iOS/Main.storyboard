@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -40,7 +41,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lnC-Aq-kx3" firstAttribute="top" secondItem="oBE-Ac-vcx" secondAttribute="bottom" constant="37" id="HHB-bk-c5K"/>
                             <constraint firstItem="oBE-Ac-vcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HiD-uS-i16"/>
@@ -72,7 +73,7 @@
                     <view key="view" contentMode="scaleToFill" id="iGl-5m-CGZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6f5-Z3-FY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,10 +89,50 @@
                         <viewControllerLayoutGuide type="bottom" id="m97-wt-2II"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hVl-Rk-keo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-Yv-TfT">
+                                <rect key="frame" x="20" y="486" width="506" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wZb-2X-Y2t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFL-1G-cro">
+                                <rect key="frame" x="534" y="486" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="P1n-Ua-zL8"/>
+                                    <constraint firstAttribute="width" constant="46" id="m4b-gf-pOE"/>
+                                </constraints>
+                                <state key="normal" title="GO!"/>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIs-Cw-VHs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="478"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zFL-1G-cro" firstAttribute="centerY" secondItem="Nbp-Yv-TfT" secondAttribute="centerY" id="HLe-VH-8cf"/>
+                            <constraint firstItem="NIs-Cw-VHs" firstAttribute="top" secondItem="hlt-hK-qWi" secondAttribute="bottom" id="L56-UY-geC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NIs-Cw-VHs" secondAttribute="trailing" constant="-20" id="LBy-JG-gbA"/>
+                            <constraint firstItem="Nbp-Yv-TfT" firstAttribute="leading" secondItem="hVl-Rk-keo" secondAttribute="leadingMargin" id="M79-fX-7Z9"/>
+                            <constraint firstItem="zFL-1G-cro" firstAttribute="trailing" secondItem="hVl-Rk-keo" secondAttribute="trailingMargin" id="S7r-OU-CAS"/>
+                            <constraint firstItem="zFL-1G-cro" firstAttribute="leading" secondItem="Nbp-Yv-TfT" secondAttribute="trailing" constant="8" id="cRj-Bh-AXG"/>
+                            <constraint firstItem="m97-wt-2II" firstAttribute="top" secondItem="zFL-1G-cro" secondAttribute="bottom" constant="20" id="mKL-ma-Zey"/>
+                            <constraint firstItem="zFL-1G-cro" firstAttribute="top" secondItem="NIs-Cw-VHs" secondAttribute="bottom" constant="8" id="seY-86-AD9"/>
+                            <constraint firstItem="NIs-Cw-VHs" firstAttribute="leading" secondItem="hVl-Rk-keo" secondAttribute="leadingMargin" constant="-20" id="ztG-FN-vwz"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="btnGo" destination="zFL-1G-cro" id="4xL-JN-w4h"/>
+                        <outlet property="myWebView" destination="NIs-Cw-VHs" id="mTt-Zq-fjk"/>
+                        <outlet property="txtUrl" destination="Nbp-Yv-TfT" id="K1m-c2-jqO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xW-Wb-waj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

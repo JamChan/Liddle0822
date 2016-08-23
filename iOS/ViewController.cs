@@ -37,5 +37,26 @@ namespace Liddle.iOS
 			base.DidReceiveMemoryWarning ();
 			// Release any cached data, images, etc that aren't in use.		
 		}
+
+		public override void PrepareForSegue (UIStoryboardSegue segue, Foundation.NSObject sender)
+		{
+			base.PrepareForSegue (segue, sender);
+
+			if ("moveToMapViewSegue" == segue.Identifier) {
+
+				if (segue.DestinationViewController is MyMapViewController) {
+
+					var dest = segue.DestinationViewController as MyMapViewController;
+
+
+					dest.TitleString = "Bye! Bye!";
+				
+				}
+			
+			
+			}
+
+
+		}
 	}
 }
