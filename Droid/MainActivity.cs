@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
 
 namespace Liddle.Droid
 {
@@ -16,8 +17,22 @@ namespace Liddle.Droid
 			SetContentView (Resource.Layout.Main);
 
 			// 
+			var btnMap = FindViewById<Button> (Resource.Id.main_menuview_btnMap);
+			btnMap.Click += (sender, e) => {
+
+				StartActivity ( typeof(MyMapActivity) );
+
+			};
 
 
+			var btnWeb = FindViewById<Button> (Resource.Id.main_menuview_btnWeb);
+			btnWeb.Click += (sender, e) => {
+				Intent webActivity = new Intent (this, typeof (MyWebActivity));
+
+				webActivity.PutExtra ("url", "https://stackoverflow.com");
+
+				StartActivity (webActivity);
+			};
 
 		}
 	}
