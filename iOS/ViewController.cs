@@ -7,7 +7,7 @@ namespace Liddle.iOS
 	public partial class ViewController : UIViewController
 	{
 		private string NextUrl { get; set; }
-		private KeyValueManager StoreManager { get; set; }
+		//private KeyValueManager StoreManager { get; set; }
 
 		public ViewController (IntPtr handle) : base (handle)
 		{
@@ -17,9 +17,9 @@ namespace Liddle.iOS
 		{
 			base.ViewDidLoad ();
 
-			StoreManager = new KeyValueManager ();
-			NextUrl = "https://www.google.com";
-			StoreManager.SaveNSDefaults ("nextUrl", NextUrl);
+			//StoreManager = new KeyValueManager ();
+			//NextUrl = "https://www.google.com";
+			//StoreManager.SaveNSDefaults ("nextUrl", NextUrl);
 
 			Button.TouchUpInside += (sender, e) => {
 				// moveToMapViewSegue
@@ -29,6 +29,10 @@ namespace Liddle.iOS
 			btnConfirm.TouchUpInside += (sender, e) => {
 				// moveToWebViewSegue
 				PerformSegue ("moveToWebViewSegue", this);
+			};
+
+			btnTable.TouchUpInside += (sender, e) => {
+				PerformSegue ("moveMyTableViewSegue", this);
 			};
 		}
 

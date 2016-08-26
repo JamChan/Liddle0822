@@ -16,10 +16,18 @@ namespace Liddle.iOS
 		UIKit.UIButton btnConfirm { get; set; }
 
 		[Outlet]
+		UIKit.UIButton btnTable { get; set; }
+
+		[Outlet]
 		UIKit.UIButton Button { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnTable != null) {
+				btnTable.Dispose ();
+				btnTable = null;
+			}
+
 			if (btnConfirm != null) {
 				btnConfirm.Dispose ();
 				btnConfirm = null;

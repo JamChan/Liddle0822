@@ -1,11 +1,12 @@
 ﻿using System;
 namespace Liddle
 {
-	public class MyClass
+	public class Todo
 	{
-		public MyClass ()
-		{
-		}
+
+		public string Name { get; set; }
+
+		public string Description { get; set; }
 	}
 }
 

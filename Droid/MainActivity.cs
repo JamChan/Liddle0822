@@ -34,6 +34,14 @@ namespace Liddle.Droid
 				StartActivity (webActivity);
 			};
 
+
+			var btnTable = FindViewById<Button> (Resource.Id.main_menuview_btnTable);
+			btnTable.Click += (sender, e) => {
+
+				StartActivity (typeof (MyListActivity));
+
+			};
+
 		}
 	}
 }

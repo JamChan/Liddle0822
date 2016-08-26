@@ -137,8 +137,16 @@
     <Compile Include="MyWebViewController.designer.cs">
       <DependentUpon>MyWebViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="KeyValueManager.cs" />
     <Compile Include="SQLiteWorker.cs" />
+    <Compile Include="MyTableViewController.cs" />
+    <Compile Include="MyTableViewController.designer.cs">
+      <DependentUpon>MyTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyTableViewCell.cs" />
+    <Compile Include="MyTableViewCell.designer.cs">
+      <DependentUpon>MyTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todo.cs" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="json.net">

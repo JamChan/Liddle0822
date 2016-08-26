@@ -23,4 +23,14 @@
         android:layout_marginTop="40dp"
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_menuview_btnTable"
+        android:text="Table"
+        android:layout_below="@+id/main_menuview_btnWeb"
+        android:layout_alignEnd="@+id/main_menuview_btnWeb"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp" />
 </RelativeLayout>
