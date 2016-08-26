@@ -9,6 +9,8 @@ namespace Liddle.iOS
 {
 	public partial class MyWebViewController : UIViewController
 	{
+		private KeyValueManager StoreManager { get; set; }
+
 		public MyWebViewController (IntPtr handle) : base (handle)
 		{
 		}
@@ -19,6 +21,9 @@ namespace Liddle.iOS
 			// Perform any additional setup after loading the view, typically from a nib.
 			Title = "Web";
 
+			StoreManager = new KeyValueManager ();
+
+
 			btnGo.TouchUpInside += (sender, e) => {
 
 				if (txtUrl.IsFirstResponder) {
@@ -26,8 +31,10 @@ namespace Liddle.iOS
 				}
 				btnGoBottomConstraint.Constant = 10;
 
+				var url = StoreManager.ReadNSDefaults ("nextUrl");
+				var uriString = string.IsNullOrEmpty (txtUrl.Text) ? url : txtUrl.Text;
 
-				myWebView.LoadRequest (new NSUrlRequest (new NSUrl (txtUrl.Text)));
+				myWebView.LoadRequest (new NSUrlRequest (new NSUrl (uriString )));
 			};
 
 			UIKeyboard.Notifications.ObserveWillChangeFrame ((sender, e) => {

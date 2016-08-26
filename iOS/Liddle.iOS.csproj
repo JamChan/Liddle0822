@@ -131,6 +131,7 @@
     <Compile Include="MyWebViewController.designer.cs">
       <DependentUpon>MyWebViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="KeyValueManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="json.net">
