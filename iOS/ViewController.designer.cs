@@ -16,6 +16,9 @@ namespace Liddle.iOS
 		UIKit.UIButton btnConfirm { get; set; }
 
 		[Outlet]
+		UIKit.UIButton btnPicker { get; set; }
+
+		[Outlet]
 		UIKit.UIButton btnTable { get; set; }
 
 		[Outlet]
@@ -23,14 +26,19 @@ namespace Liddle.iOS
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (btnTable != null) {
-				btnTable.Dispose ();
-				btnTable = null;
+			if (btnPicker != null) {
+				btnPicker.Dispose ();
+				btnPicker = null;
 			}
 
 			if (btnConfirm != null) {
 				btnConfirm.Dispose ();
 				btnConfirm = null;
+			}
+
+			if (btnTable != null) {
+				btnTable.Dispose ();
+				btnTable = null;
 			}
 
 			if (Button != null) {

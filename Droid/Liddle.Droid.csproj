@@ -68,6 +68,7 @@
     <Compile Include="Web\MyWebActivity.cs" />
     <Compile Include="Map\MyMapActivity.cs" />
     <Compile Include="Table\MyListActivity.cs" />
+    <Compile Include="Controls\ControlActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -88,6 +89,7 @@
     <AndroidResource Include="Resources\layout\web_mywebview.xml" />
     <AndroidResource Include="Resources\layout\table_mylistview.axml" />
     <AndroidResource Include="Resources\layout\table_mylistview_itemview.xml" />
+    <AndroidResource Include="Resources\layout\control_controlsview.axml" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="json.net">
@@ -107,6 +109,7 @@
     <Folder Include="Web\" />
     <Folder Include="Map\" />
     <Folder Include="Table\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -52,31 +52,72 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxw-iZ-Wx3">
+                                <rect key="frame" x="220" y="484" width="160" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NoN-lk-EW7"/>
+                                    <constraint firstAttribute="width" constant="160" id="skx-Gl-9Jp"/>
+                                </constraints>
+                                <state key="normal" title="Picker">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lnC-Aq-kx3" firstAttribute="top" secondItem="oBE-Ac-vcx" secondAttribute="bottom" constant="37" id="HHB-bk-c5K"/>
                             <constraint firstItem="oBE-Ac-vcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HiD-uS-i16"/>
+                            <constraint firstItem="Dxw-iZ-Wx3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HkC-JN-tZ3"/>
                             <constraint firstItem="0Ia-fP-aG1" firstAttribute="top" secondItem="lnC-Aq-kx3" secondAttribute="bottom" constant="34" id="IUs-Wi-uDr"/>
                             <constraint firstItem="lnC-Aq-kx3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R6M-VP-I5k"/>
                             <constraint firstItem="oBE-Ac-vcx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YgX-7e-bMc"/>
                             <constraint firstItem="0Ia-fP-aG1" firstAttribute="centerX" secondItem="oBE-Ac-vcx" secondAttribute="centerX" id="bcn-P3-DGm"/>
                             <constraint firstItem="lnC-Aq-kx3" firstAttribute="width" secondItem="oBE-Ac-vcx" secondAttribute="width" id="mSE-7w-fKB"/>
+                            <constraint firstItem="Dxw-iZ-Wx3" firstAttribute="top" secondItem="0Ia-fP-aG1" secondAttribute="bottom" constant="38" id="nh4-Q9-OiD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RrM-Jp-LFu"/>
                     <connections>
                         <outlet property="Button" destination="oBE-Ac-vcx" id="OkX-0Z-gth"/>
                         <outlet property="btnConfirm" destination="lnC-Aq-kx3" id="cYS-pa-8K4"/>
+                        <outlet property="btnPicker" destination="Dxw-iZ-Wx3" id="LyX-t8-6h4"/>
                         <outlet property="btnTable" destination="0Ia-fP-aG1" id="Z4k-sC-4Mj"/>
                         <segue destination="oeH-6v-jy3" kind="show" identifier="moveToMapViewSegue" id="Tqe-FT-Aea"/>
                         <segue destination="F2Z-Wi-CRC" kind="show" identifier="moveToWebViewSegue" id="KY8-C2-uoc"/>
                         <segue destination="KNr-hE-FXV" kind="show" identifier="moveMyTableViewSegue" id="TgQ-xj-df6"/>
+                        <segue destination="y9A-aE-oEQ" kind="show" identifier="moveToControlsViewSegue" id="xXX-uP-ZP9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="952" y="323"/>
+        </scene>
+        <!--Controls View Controller-->
+        <scene sceneID="oVh-qI-cGb">
+            <objects>
+                <viewController id="y9A-aE-oEQ" customClass="ControlsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WUt-Yl-em3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ayt-8x-gy0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PZ1-vm-EXK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfF-rA-bxz">
+                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickUrl" destination="FfF-rA-bxz" id="hoW-2X-6jp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1e-oO-sHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="1066"/>
         </scene>
         <!--My Table View Controller-->
         <scene sceneID="Mi8-lm-m0k">

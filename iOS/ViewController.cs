@@ -34,6 +34,10 @@ namespace Liddle.iOS
 			btnTable.TouchUpInside += (sender, e) => {
 				PerformSegue ("moveMyTableViewSegue", this);
 			};
+
+			btnPicker.TouchUpInside += (sender, e) => {
+				PerformSegue ("moveToControlsViewSegue", this);
+			};
 		}
 
 		public override void ViewWillAppear (bool animated)

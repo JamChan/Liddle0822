@@ -42,6 +42,12 @@ namespace Liddle.Droid
 
 			};
 
+			var btnControls = FindViewById<Button> (Resource.Id.main_menuview_btnControls);
+			btnControls.Click += (sender, e) => {
+
+				StartActivity (typeof (ControlActivity));
+
+			};
 		}
 	}
 }
